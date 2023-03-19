@@ -1,8 +1,10 @@
 // Init GitHub
 const github = new GitHub;
+
+const ui = new UI;
+
 // Storing input field in a variable
 let inputField = document.querySelector("input");
-
 
 inputField.addEventListener("keyup",(event)=>{
     //Get input text
@@ -17,7 +19,7 @@ inputField.addEventListener("keyup",(event)=>{
             if(data.profile.message === "Not Found"){
                 // Show alert
             }else{
-                //Show profile
+                ui.showProfile(data.profile);
             }
         })
     }else{
